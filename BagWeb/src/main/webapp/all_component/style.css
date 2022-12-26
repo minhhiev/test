@@ -1,0 +1,299 @@
+.bg-custom{
+	background-color: #42a5f5;
+}
+
+.navbar .nav-item:hover .nav-link{
+	background-color: #444;
+	color: green;
+}
+
+.navbar {
+	background-color: green;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 3fr));
+    gap:1rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 20px;
+    color:var(--black);
+    padding:1rem 5rem;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 20px;
+    color:var(--light-color);
+    padding:1rem 5rem;
+}
+
+.footer .box-container .box a i{
+    color:var(--blue);
+    padding-right: 1rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+
+.footer .share{
+    padding:0.5rem 0;
+    text-align: center;
+}
+
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 5rem;
+    font-size: 40px;
+    color:black;
+    background:var(--blue);
+    margin:0 .3rem;
+    border-radius: 10%; 
+}
+
+.footer .share a:hover{
+    background:var(--blue);
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding:0 1rem;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color:var(--blue);
+}
+.reviews .box{    
+    border:var(--border);
+    padding: 1rem 5rem;
+    text-align: center;
+    margin:0 0;
+    
+}
+
+.reviews .box img{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.reviews .box h3{
+    color:var(--black);
+    font-size: 20px;
+    padding:.2rem 0;
+}
+
+.reviews .box p{
+    color:var(--light-color);
+    font-size: 20px;
+    padding:1rem 0;
+    line-height: 2;
+}
+
+.reviews .box .stars{
+    padding-top: -20px;
+}
+
+.reviews .box .stars i{
+    font-size: 20px;
+    color:var(--blue);
+}
+
+
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #007b5e !important;
+}
+#footer h5{
+  padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+  padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+  font-size:25px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+  font-size:30px;
+  margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+  color:#ffffff;
+}
+#footer ul.social li a:hover{
+  color:#eeeeee;
+}
+#footer ul.quick-links li{
+  padding: 3px 0;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+  padding: 3px 0;
+  margin-left:5px;
+  font-weight:700;
+}
+#footer ul.quick-links li a i{
+  margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+  #footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 30px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+
